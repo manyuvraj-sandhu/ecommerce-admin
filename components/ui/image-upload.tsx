@@ -1,6 +1,6 @@
 "use client";
 
-import { Image } from "next/image";
+import Image from "next/image";
 import { useState, useEffect } from "react";
 import { ImagePlus, Trash } from "lucide-react";
 import { CldUploadWidget } from "next-cloudinary";
@@ -8,7 +8,7 @@ import { CldUploadWidget } from "next-cloudinary";
 import { Button } from "@/components/ui/button";
 
 interface ImageUploadProps {
-    disabled?: boolean,
+    disabled?: boolean;
     onChange: (value: string) => void;
     onRemove: (value: string) => void;
     value: string[];
