@@ -18,7 +18,7 @@ export async function POST(
     req: Request,
     { params }: { params: { storeId: string } }
 ) {
-    const productIds = await req.json();
+    const { productIds } = await req.json();
 
     if (!productIds || productIds.length === 0) {
         return new NextResponse("Product ids are required", { status: 400 });
@@ -77,5 +77,7 @@ export async function POST(
         }
     });
 
-    
-}
+    return NextResponse.json({ url: session.url }, {
+        headers: corsHeaders
+    });
+};
