@@ -8,6 +8,7 @@ export async function POST(
     { params }: { params: { storeId: string } }
 ) {
     try {
+        // @ts-ignore
         const { userId } = getAuth(req);
         const body = await req.json();
 

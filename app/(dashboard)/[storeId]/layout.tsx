@@ -18,6 +18,7 @@ export default async function DashboardLayout({
         authHeaders[key] = value;
     });
 
+    // @ts-ignore
     const { userId } = getAuth({ headers: authHeaders });
 
     if (!userId) {

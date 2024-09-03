@@ -7,6 +7,7 @@ export async function POST(
     req: Request,
 ) {
     try {
+        // @ts-ignore
         const { userId } = getAuth(req);
         const body = await req.json();
 

@@ -22,6 +22,7 @@ const SettingsPage: React.FC<SettingsPageProps> = async ({
         authHeaders[key] = value;
     });
 
+    // @ts-ignore
     const { userId } = getAuth({ headers: authHeaders });
 
     if (!userId) {

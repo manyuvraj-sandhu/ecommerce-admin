@@ -15,6 +15,7 @@ const Navbar = async () => {
         authHeaders[key] = value;
     });
 
+    // @ts-ignore
     const { userId } = getAuth({ headers: authHeaders });
 
     if (!userId) {

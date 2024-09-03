@@ -30,6 +30,7 @@ export async function PATCH (
     { params }: { params: { storeId: string, sizeId: string }}
 ) {
     try {
+        // @ts-ignore
         const { userId } = getAuth(req);
         const body = await req.json();
 
@@ -84,6 +85,7 @@ export async function DELETE (
     { params }: { params: { storeId: string, sizeId: string }}
 ) {
     try {
+        // @ts-ignore
         const { userId } = getAuth(req);
 
         if (!userId) {

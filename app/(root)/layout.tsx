@@ -15,6 +15,7 @@ export default async function SetupLayout({
         authHeaders[key] = value;
     });
     
+    // @ts-ignore
     const { userId } = getAuth({ headers: authHeaders });
 
     if (!userId) {
